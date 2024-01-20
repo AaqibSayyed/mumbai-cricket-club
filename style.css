@@ -6,9 +6,6 @@
     color: #fff;  
 }
 
-html{
-    font-size: 62.5%;
-}
 
 body{
     height: 100%;
@@ -83,11 +80,12 @@ body{
 
 #video{
     /* border: 2px solid blue; */
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     position: fixed;    
 }
+
 
 #main {
     /* border: 2px solid salmon; */
@@ -113,9 +111,7 @@ body{
     position: relative;
     z-index: 2;
     text-transform: uppercase;
-
 }
-
 
 #page1 h1::before{
     content: "EAT. DRINK. PLAY.";
@@ -135,7 +131,6 @@ body{
     margin-bottom: .7vw;
     z-index: 2;
     text-transform: uppercase;
-
 }
 
 #page1 h2::before{
@@ -164,22 +159,20 @@ body{
     left: 0.05vw;
 }
 
+
 #page2{
     /* border: 2px solid red; */
     position: relative;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     z-index: 2;
 }
 
 
 #scroll-in{
     /* border: 2px solid blue; */
+    overflow-x: hidden;
     white-space: nowrap;
-    animation-name: scroll;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 
 }
 
@@ -195,7 +188,17 @@ body{
     -webkit-text-stroke: 3px #fff;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
+    z-index: 2;
+
 } 
+
+
+#scroll{
+animation-name: scroll;
+animation-duration: 30s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
 
 #scroll-in h4:hover{
     color: #95c11e;
@@ -206,6 +209,7 @@ body{
 #container{
     /* border: 2px solid green; */
     height: 85%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,6 +227,7 @@ body{
     position: relative;
     box-shadow: 2px 2px 15px #fff;
 }
+
 
 .black-shadow{  
     height: 100%;
@@ -243,6 +248,7 @@ body{
     
 }
 
+
 .lesson-card:hover .overlay{
     transform: translateX(0%);
 }
@@ -256,7 +262,6 @@ body{
     margin-left: .7vw;
 
 }
-
 
 .overlay p{
     /* color: #000; */
@@ -317,6 +322,33 @@ body{
     top: 38%;
     right: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #page3{
@@ -503,27 +535,26 @@ body{
 #about-us {
     height: 70vh;
     width: 100%;
-    /* background-color: red; */
     display: flex;
-    padding: 0 5rem;
+    padding: 0 2vw;
     align-items: center;
     position: relative;
     z-index: 2;
     justify-content: space-around;
   }
   #about-us-image1{
-    height: 22rem;
-    width: 22rem;
-    border-radius: 2rem;
+    height: 55%;
+    width: 20%;
+    border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #about-us-image2{
-    height: 22rem;
-    width: 22rem;
-    border-radius: 2rem;
+    height: 55%;
+    width: 20%;
+    border-radius: 10px;
     object-fit: cover;
 }
   #about-us-in {
@@ -531,16 +562,16 @@ body{
     text-align: center;
   }
   #about-us-in h4 {
-    font-size: 5rem;
+    font-size: 4vw;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 2vw;
   }
   #about-us-in p {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 3rem;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
     text-transform: uppercase;
   }
 
@@ -553,93 +584,98 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12rem;
-    padding: 0 100px;
+    gap: 10vw;
+    padding: 0 9vw;
   }
+
   #footer > img {
     position: absolute;
     left: 0;
     height: 100%;
-    z-index: 0;
+    z-index: 2;
   }
+
   #f1 img {
-    width: 30rem;
-    margin-left: -3rem;
+    width: 23vw;
+    margin-left: -3vw;
   }
-  #f1,
+
   #f2,
   #f3,
   #f4 {
+    /* border: 2px solid olive; */
     width: fit-content;
+    height: 60%;
     position: relative;
     z-index: 2;
-    /* background-color: red; */
   }
 
-
   #f2 h3 {
-    font-size: 1.7rem;
+    font-size: 1vw;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
-    margin-bottom: .8rem;
+    margin-bottom: .4vw;
   }
 
   
   #f2 h2{
-    font-size: 2rem;
+    font-size: 1.6vw;
     font-weight: 900;
   }
 
   #f2 hr{
-    margin-bottom: 2rem;
-    width: 82%;
-
+    margin-bottom: 2vw;
+    width: 100%;
   }
 
 
   #f3 h3 {
-    font-size: 1.7rem;
+    font-size: 1vw;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
-    margin-bottom: .8rem;
+    margin-bottom: .4vw;
   }
 
     #f3 h2{
-    font-size: 2rem;
-    font-weight: 900;
+        font-size: 1.6vw;
+        font-weight: 900;
   }
   
   
   #f3 hr{
-    margin-bottom: 2rem;
-    width: 53%;
+    margin-bottom: 2vw;
+    width: 100%;
 
   }
 
+
   #f4 h4 {
-    font-size: 1.2rem;
+    font-size: 1vw;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
-    margin-bottom: .8rem;
+    margin-bottom: .4vw;
   }
 
   #f4 h2{
-    font-size: 2rem;
+    font-size: 1.6vw;
     font-weight: 900;
   }
   
   
   #f4 hr{
-    margin-bottom: 1rem;
-    width: 93%;
+    margin-bottom: 2vw;
+    width: 100%;
 
   }
+
+
+
 
 @keyframes scroll {
     from{
