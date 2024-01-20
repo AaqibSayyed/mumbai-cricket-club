@@ -503,7 +503,7 @@ body{
 #about-us {
     height: 70vh;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     padding: 0 5rem;
     align-items: center;
