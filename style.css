@@ -1,0 +1,651 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;  
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#cursor{
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#cursor-id{
+    position: fixed;
+    height: 150px;
+    width: 150px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 1;
+}
+
+
+
+/* kuch bhi select kru to uska bg color and color change ho jaye jo niche diya hai usme  */
+*::selection{
+    background-color: #fff;
+    color: #95c11e;
+}
+
+#nav{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4vw;
+    position: fixed;
+    padding: 2vw 2vw;
+    z-index: 3;
+}
+
+
+#nav img{
+    width: 20vw;
+    margin-right: 7vw;
+    z-index: 3;
+}
+
+
+#nav h4{
+    font-weight: 900;
+    font-size: 1.1vw;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    z-index: 3;
+    text-transform: uppercase;
+}   
+
+#nav h4:hover{
+   transform: scale(1.3);
+}
+
+#nav a{
+    text-decoration: none;
+}
+
+#video{
+    /* border: 2px solid blue; */
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;    
+}
+
+#main {
+    /* border: 2px solid salmon; */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+#page1{ 
+    /* border: 2px solid purple; */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 h1{
+    font-size: 6vw;
+    font-weight: 900;
+    margin-top: 5vw;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+
+}
+
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -0.3vw;
+    left: -0.3vw;
+    /* stroke effect ke liye use hota hai .. first value me batana hota hai ke kitna boldnes chahiye and second me color  */
+    -webkit-text-stroke: 1.5px #95c11e; 
+}
+
+
+#page1 h2{
+    font-size: 2vw;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: .7vw;
+    z-index: 2;
+    text-transform: uppercase;
+
+}
+
+#page1 h2::before{
+    content: "WELCOME TO MUMBAI CRICKET CLUB!";
+    position: absolute;
+    top: -0.1vw;
+    left: -0.1vw;
+    
+}
+
+
+#page1 p{
+    position: relative;
+    font-size: 1.1vw;
+    font-weight: 400;
+    width: 40%;
+    text-align: center;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+#page1 p::before{
+    content: "MUMBAI CRICKET CLUB is located in CST,Mumbai. Passionate about Cricket, Technology, Player Development and making Cricket fun and accessible to everyone.";
+    position: absolute;
+    top: 0.05vw;
+    left: 0.05vw;
+}
+
+#page2{
+    /* border: 2px solid red; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+
+#scroll-in{
+    /* border: 2px solid blue; */
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#scroll-in h4{
+    /* border: 2px solid green; */
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 1vw;
+    font-size: 4vw;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px #fff;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+} 
+
+#scroll-in h4:hover{
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+
+#container{
+    /* border: 2px solid green; */
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:12vw
+}
+
+.lesson-card{
+    /* border: 2px solid salmon; */
+    height: 60%;
+    width: 20%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8vw;
+    position: relative;
+    box-shadow: 2px 2px 15px #fff;
+}
+
+.black-shadow{  
+    height: 100%;
+    width: 100%;
+    background-color: rgba(73, 60, 60, 0.171);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #95c11e;
+    border-radius: 10px;
+    transform: translateX(100%);
+    transition: transform 1.3s ease-in-out;
+    text-transform: uppercase;
+    
+}
+
+.lesson-card:hover .overlay{
+    transform: translateX(0%);
+}
+
+.overlay h4{
+    /* color: #000; */
+    font-size: 1.7vw;
+    white-space: nowrap;
+    font-weight: 800;
+    margin-top: 5.5vw;
+    margin-left: .7vw;
+
+}
+
+
+.overlay p{
+    /* color: #000; */
+    font-size: 1vw;
+    /* font-weight: 400; */
+    margin-top: 1vw;
+    margin-left: .7vw;
+    line-height: 1.3vw;
+    
+}
+
+
+#batting{
+    background-image: url('./assets/yogendra-singh-dE3exzmYlKc-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bowling{
+    background-image: url('./assets/bowling.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#fielding{
+    background-image: url('./assets/fielding.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#cricket-lesson{
+    position: absolute;
+    font-size: 7vw;
+    font-weight: 900;
+    color: #95c11e;
+    margin-bottom: 20vw;
+}
+
+#bg1{
+    position: absolute;
+    object-fit: cover;
+    height: 49vh;
+    width: 12vw;
+    top: 39%;
+    left: 0;
+}
+
+#bg2{
+    /* border: 2px solid blue; */
+    position: absolute;
+    object-fit: cover;
+    height: 51vh;
+    width: 12vw;
+    top: 38%;
+    right: 0;
+}
+
+
+#page3{
+    /* border: 2px solid silver; */
+    height: 60vh;
+    width: 100%;
+    margin-top: 2rem;
+    z-index: 2;
+
+}   
+
+#page3-container{
+    /* border: 2px solid sienna; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+    border-radius: 10px;
+    position: relative;
+
+}
+
+
+
+#image-slide-box{
+    /* border: 2px solid black; */
+    width: 30%;
+    height: 70%;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px #fff;
+    margin-left: 3vw;
+}
+
+#image1{
+    /* border: 2px solid blue; */
+    background-image: url('./assets/pexels-raunaq-sachdev-15862398.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+#image2{
+    /* position: absolute; */
+    /* border: 2px solid peru; */
+    background-image: url('./assets/pexels-kabita-darlami-6843752.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#image3{
+    /* border: 2px solid peru; */
+    background-image: url('./assets/pexels-suzy-hazelwood-4219639.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#image-slider1{
+    border: 1px solid black;
+    position: absolute;
+    height: 3.3vh;
+    width: 1.5vw;
+    background-color: #95c11e;
+    border-radius: 50%;
+    bottom: 0;
+    left: 21%;
+    cursor: pointer;
+    margin-bottom: 1.3vw;
+    transition: all .5s ease-in-out;
+}
+
+
+#image-slider2{
+    border: 1px solid black;
+    position: absolute;
+    height: 3.3vh;
+    width: 1.5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 0;
+    left: 23%;
+    cursor: pointer;
+    margin-bottom: 1.3vw;
+    transition: all .5s ease-in-out;
+
+}
+
+
+#image-slider3{
+    border: 1px solid black;
+    position: absolute;
+    height: 3.3vh;
+    width: 1.5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 0;
+    left: 25%;
+    cursor: pointer;
+    margin-bottom: 1.3vw;
+    transition: all .5s ease-in-out;
+}
+
+
+
+
+#image-slider1:hover{
+    transform:scale(1.1) ;
+}
+
+#image-slider2:hover{
+    transform:scale(1.1) ;
+}
+#image-slider3:hover{
+    transform:scale(1.1) ;
+}
+
+#leagues{
+    /* border: 2px solid lightblue; */
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+#leagues h4{
+    font-size: 2.2vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: -1vw;
+}
+
+#leagues p{
+    margin-top: 1.5vw;
+    width: 80%;
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 2vw;
+    text-transform: uppercase;
+}
+
+#page3 #first-quote{
+    position: absolute;
+    color: #95c11e;
+    background-color: #fff;
+    height: 4vw;
+    width: 4vw;
+    top: -27%;
+    left: 0;
+    border-radius: 50%;
+
+}
+
+
+#page3 #second-quote{
+    position: absolute;
+    color: #95c11e;
+    background-color: #fff;
+    height: 4vw;
+    width: 4vw;
+    bottom: -27%;
+    right: 0;
+    border-radius: 50%;
+}
+
+
+#about-us {
+    height: 70vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    justify-content: space-around;
+  }
+  #about-us-image1{
+    height: 22rem;
+    width: 22rem;
+    border-radius: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#about-us-image2{
+    height: 22rem;
+    width: 22rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+  }
+  #about-us-in h4 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  #about-us-in p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+
+  #footer {
+    height: 43vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12rem;
+    padding: 0 100px;
+  }
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  #f1 img {
+    width: 30rem;
+    margin-left: -3rem;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    /* background-color: red; */
+  }
+
+
+  #f2 h3 {
+    font-size: 1.7rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: .8rem;
+  }
+
+  
+  #f2 h2{
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  #f2 hr{
+    margin-bottom: 2rem;
+    width: 82%;
+
+  }
+
+
+  #f3 h3 {
+    font-size: 1.7rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: .8rem;
+  }
+
+    #f3 h2{
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  
+  #f3 hr{
+    margin-bottom: 2rem;
+    width: 53%;
+
+  }
+
+  #f4 h4 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: .8rem;
+  }
+
+  #f4 h2{
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  
+  #f4 hr{
+    margin-bottom: 1rem;
+    width: 93%;
+
+  }
+
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

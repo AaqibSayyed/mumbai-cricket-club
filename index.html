@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cricket Club</title>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="script.js" defer></script>
+<body>
+
+    <nav id="nav">
+        <img src="./assets/newlogo.png" />
+            <a href="#page1" style="text-decoration: underline;"><h4 class="menu">HOME</h4></a>
+            <a href="#page2"><h4 class="menu">CRICKET LESSIONS</h4></a>
+            <a href="#page3"><h4 class="menu">LEAGUES</h4></a>
+            <a href="#page4"><h4 class="menu">ABOUT US</h4></a>
+    </nav>
+    
+    <div id="cursor"></div>
+    <div id="cursor-id"></div>
+
+    <!-- autoplay is to play the video .. loop: play the video in loop.. muted: play in mute -->
+    <video id='video' src="./assets/pexels-bahadur-nirankari-11755921 (2160p).mp4" autoplay loop muted></video> 
+
+    <div id="main">
+
+        <div id="page1">
+            <h1>EAT. DRINK. PLAY.</h1>
+            <h2>WELCOME TO MUMBAI CRICKET CLUB!</h2>
+            <p>
+                MUMBAI CRICKET CLUB is located in CST,Mumbai.
+                Passionate about Cricket, Technology, Player Development and
+                making Cricket fun and accessible to everyone.
+            </p>
+        </div>
+
+        <div id="page2">
+                <div id="scroll-in">
+                    <h4>HOME</h4>
+                    <h4>CRICKET LESSIONS</h4>
+                    <h4>LEAGUES</h4>
+                    <h4>ABOUT US</h4>
+                    <h4>HOME</h4>
+                    <h4>CRICKET LESSIONS</h4>
+                    <h4>LEAGUES</h4>
+                    <h4>ABOUT US</h4>
+                    <h4>HOME</h4>
+                    <h4>CRICKET LESSIONS</h4>
+                    <h4>LEAGUES</h4>
+                    <h4>ABOUT US</h4>
+                </div>
+                <div id="container">
+                    <img src="./assets/dots-side.jpeg.svg" id="bg1" alt="dot-bg"></img>
+                    <img src="./assets/dots-side.jpeg.svg" id="bg2" alt="dot-bg"></img>
+
+                    <div id="cricket-lesson">CRICKET LESSONS</div>
+                    <div id="batting" class="lesson-card">                    
+                        <div class="black-shadow"><div class="overlay">
+                        <h4>BATTING COACH</h4>
+                        <p>WE HAVE EXCELENT BATTING COACHES, TO GUIDE YOU THROUGHOUT YOUR CAREER.
+                           <br><strong>WASIM JAFFER, VVS LAXMAN & RICKY PONTING</strong> ARE SOME BIG NAMES FROM INTERNATION CRCIKET WHO WILL GUIDE YOU TO ACHIVE YOUR DREAMS.
+                        </p>
+                    </div></div></div>
+                    <div id="bowling" class="lesson-card"><div class="black-shadow"><div class="overlay">
+                        <h4>BOWLING COACH</h4>
+                        <p>WE HAVE EXCELENT BOWLING COACHES, TO GUIDE YOU THROUGHOUT YOUR CAREER.
+                            <br><strong>AJIT AGARKAR, ZAHEER KHAN & GLENN MCGRATH</strong> ARE SOME BIG NAMES FROM INTERNATION CRCIKET WHO WILL GUIDE YOU TO ACHIVE YOUR DREAMS.
+                        </p>
+                    </div></div></div>
+                    <div id="fielding" class="lesson-card"><div class="black-shadow"><div class="overlay">
+                        <h4>FIELDING COACH</h4>
+                        <p>WE HAVE EXCELENT FIELDING COACHES, TO GUIDE YOU THROUGHOUT YOUR CAREER.
+                            <br><strong>JONTY RHODES & MOHAMMAD KAIF</strong> ARE SOME BIG NAMES FROM INTERNATION CRCIKET WHO WILL GUIDE YOU TO ACHIVE YOUR DREAMS.
+                        </p>
+                    </div></div></div>
+                </div>
+        </div>
+
+        <div id="page3">
+           <div id="page3-container">
+            <div id="image-slide-box">
+
+                <a href='#image1'id="image-slider1"></a>
+                <a href='#image2'id="image-slider2"></a>
+                <a href='#image3'id="image-slider3"></a>
+
+                <div id="image1"></div>
+                <div id="image2"></div>
+                <div id="image3"></div>
+
+            </div>
+            <div id="leagues">
+                <img src="./assets/quote.png" id="first-quote" alt="quote">
+                <img src="./assets/double-quotes.png" id= 'second-quote' alt="quote">
+                <h4>MUMBAI CRCIKET CLUB LEAGUES</h4>
+                <p>WE ORGANIZE DIFFERENT DIFFERENT LEAGUES THAT HELP PLAYERS TO SHOWCASE THEIR TALENT AT DOMESTIC LEVEL.
+                  IN A CALENDER YEAR WE MAKE SURE THAT PLAYERS AT LEAST PLAY IN 3 to 4 DIFFERENT LEAGUES. EACH LEAGUES CONTAINING 15 MATCHES. 
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div id="page4">
+
+            <div id="about-us">
+                <img
+                  src="./assets/pexels-aalekh-deval-9153466.jpg"
+                  alt="about-us-image"
+                  id="about-us-image1"
+                />
+                <div id="about-us-in">
+                  <h4>ABOUT US</h4>
+                  <p>
+                    At MUMBAI CRICKET CLUB, we don't just play cricket; we live and breathe it. Established with a shared love for the gentleman's game, our club is a vibrant community that brings together players of all ages and skill levels under one united banner.
+                  </p>
+                </div>
+                <img
+                  src="./assets/pexels-patrick-case-3800517.jpg"
+                  alt="about-us-image"
+                  id="about-us-image2"
+                />
+              </div>
+
+        </div>
+
+
+            <div id="footer">
+                <img
+                  src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+                  alt=""
+                />
+                <div id="f1">
+                  <img
+                    src="./assets/newlogo.png"
+                    alt=""
+                  />
+                </div>
+                <div id="f2">
+                  <h2>WE PRODUCE</h2>
+                  <hr>
+                  <h3>TOP BATSMAN</h3>
+                  <h3>TOP BOWLERS</h3>
+                  <h3>TOP ALL-ROUNDERS</h3>
+                </div>
+                <div id="f3">
+                    <h2>OURS</h2>
+                    <hr>
+                  <h3>SPORT SHOP</h3>
+                  <h3>LEAGUES</h3>
+                  <h3>ABOUT US</h3>
+                </div>
+                <div id="f4">
+                    <h2>MEET US AT</h2>
+                    <hr>
+                  <h4>                 
+                    A20, AAZAD MAIDAN <br />
+                    CST <br />
+                    MUMBAI <br />
+                    400001 <br />
+                    TEL: 0208 309 0181 <br />
+                    GET DIRECTIONS <br />
+                  </h4>
+                </div>
+              </div>
+            </div>
+</body>
+</html>
