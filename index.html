@@ -11,17 +11,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 <script src="script.js" defer></script>
 <body>
+    <div id="cursor"></div>
+    <div id="cursor-id"></div>
 
     <nav id="nav">
-        <img src="./assets/newlogo.png" />
-            <a href="#page1" style="text-decoration: underline;"><h4 class="menu">HOME</h4></a>
+        <img src="./assets/newlogo.png" id="logo"/>
+        <a href="#page1" style="text-decoration: underline;"><h4>HOME</h4></a>
+        <a href="#page2"><h4>CRICKET LESSIONS</h4></a>
+        <a href="#page3"><h4>LEAGUES</h4></a>
+        <a href="#page4"><h4>ABOUT US</h4></a>            
+        <img src="./assets/icons8-menu-bar.svg" alt="navingation-bar" id="menu" onclick=showBar()></img>
+    </nav>
+    
+    <div id="menu-open">
+        <img src="./assets/close-fill.svg" alt="close-bar" onclick=closeBar()>
+        <nav id="menu-container">
+            <a href="#page1" style="text-decoration: underline;" ><h4 class="menu">HOME</h4></a>
             <a href="#page2"><h4 class="menu">CRICKET LESSIONS</h4></a>
             <a href="#page3"><h4 class="menu">LEAGUES</h4></a>
             <a href="#page4"><h4 class="menu">ABOUT US</h4></a>
-    </nav>
-    
-    <div id="cursor"></div>
-    <div id="cursor-id"></div>
+        </nav>
+    </div>
 
     <!-- autoplay is to play the video .. loop: play the video in loop.. muted: play in mute -->
     <video id='video' src="./assets/pexels-bahadur-nirankari-11755921 (2160p).mp4" autoplay loop muted></video> 
@@ -39,7 +49,15 @@
         </div>
 
         <div id="page2">
-                <div id="scroll-in">
+          <img src="./assets/dots-side.jpeg.svg" id="bg1" alt="dot-bg"></img>
+          <img src="./assets/dots-side.jpeg.svg" id="bg2" alt="dot-bg"></img>
+          <img src="./assets/dots-side.jpeg.svg" id="bg3" alt="dot-bg"></img>
+          <img src="./assets/dots-side.jpeg.svg" id="bg4" alt="dot-bg"></img>
+          <img src="./assets/dots-side.jpeg.svg" id="bg5" alt="dot-bg"></img>
+          <img src="./assets/dots-side.jpeg.svg" id="bg6" alt="dot-bg"></img>
+            
+          
+          <div id="scroll-in">
                   <div id="scroll">
                     <h4>HOME</h4>
                     <h4>CRICKET LESSIONS</h4>
@@ -55,10 +73,26 @@
                     <h4>ABOUT US</h4>
                   </div>
                 </div>
+                <div class="cricket">
+                  <p>C</p> 
+                  <p>R</p>
+                  <p class="i">I</p>
+                  <p>C</p>
+                  <p>K</p>
+                  <p>E</p>
+                  <p>T</p>
+                 </div>
+                 <div class="lessons">
+                  <p>L</p>
+                  <p>E</p>
+                  <p>S</p>
+                  <p>S</p>
+                  <p>O</p>
+                  <p>N</p>
+                  <p>S</p>
+                 </div>  
                 <div id="container">
-                    <img src="./assets/dots-side.jpeg.svg" id="bg1" alt="dot-bg"></img>
-                    <img src="./assets/dots-side.jpeg.svg" id="bg2" alt="dot-bg"></img>
-
+                  
                     <div id="cricket-lesson">CRICKET LESSONS</div>
                     <div id="batting" class="lesson-card">                    
                         <div class="black-shadow"><div class="overlay">
@@ -86,9 +120,9 @@
            <div id="page3-container">
             <div id="image-slide-box">
 
-                <a href='#image1'id="image-slider1"></a>
-                <a href='#image2'id="image-slider2"></a>
-                <a href='#image3'id="image-slider3"></a>
+                <a href='#image1'id="image-slider1" class="image-slider"></a>
+                <a href='#image2'id="image-slider2" class="image-slider"></a>
+                <a href='#image3'id="image-slider3" class="image-slider"></a>
 
                 <div id="image1"></div>
                 <div id="image2"></div>

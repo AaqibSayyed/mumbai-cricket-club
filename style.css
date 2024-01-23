@@ -54,12 +54,6 @@ body{
 }
 
 
-#nav img{
-    width: 20vw;
-    margin-right: 7vw;
-    z-index: 3;
-}
-
 
 #nav h4{
     font-weight: 900;
@@ -74,14 +68,63 @@ body{
    transform: scale(1.3);
 }
 
-#nav a{
+
+#logo{
+    width: 20vw;
+    margin-right: 7vw;
+    z-index: 3;
+}
+
+#menu{
+    height: 40%;
+    width: 10%;
+    margin-left: 20vw;
+    display:none;
+}
+
+
+#menu-open{
+    /* border: 2px solid palegoldenrod; */
+    height: 100vh;
+    width: 33vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #96c11e70;
+    backdrop-filter: blur(5px);
+    display:none;
+    transition: all 1s ease-in-out;
+    z-index: 999;
+    transform: translateX(100%);
+}
+
+#menu-open img{
+    height: 10%;
+    width: 30%;
+}
+
+#menu-container{
+    margin-top: 20vw;
+}
+
+#menu-container h4{
+    margin-bottom: 3vw;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 900;
+    white-space: nowrap;
+    margin-left: 1vw;
+
+}
+
+#nav a, #menu-container a{
     text-decoration: none;
 }
 
 #video{
     /* border: 2px solid blue; */
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     object-fit: cover;
     position: fixed;    
 }
@@ -171,7 +214,8 @@ body{
 
 #scroll-in{
     /* border: 2px solid blue; */
-    overflow-x: hidden;
+    height: 12%;
+    overflow: hidden;
     white-space: nowrap;
 
 }
@@ -208,7 +252,7 @@ animation-iteration-count: infinite;
 
 #container{
     /* border: 2px solid green; */
-    height: 85%;
+    height: 88%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -223,7 +267,7 @@ animation-iteration-count: infinite;
     cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 8vw;
+    margin-top: 5vw;
     position: relative;
     box-shadow: 2px 2px 15px #fff;
 }
@@ -301,7 +345,7 @@ animation-iteration-count: infinite;
     font-size: 7vw;
     font-weight: 900;
     color: #95c11e;
-    margin-bottom: 20vw;
+    margin-bottom: 23vw;
 }
 
 #bg1{
@@ -323,39 +367,56 @@ animation-iteration-count: infinite;
     right: 0;
 }
 
+#bg3,#bg5{
+    left: 0;
+}
+
+#bg4,#bg6{
+    right: 0;
+}
 
 
 
+#bg3,#bg4,#bg5,#bg6{
+    display:none
+}
+
+.cricket{
+    position: absolute;
+    top: 14%;
+    left: 0%;
+    font-size: 16vw;
+    font-weight: 900;
+    margin-left: 5vw;
+    text-shadow: 2px 2px 7px white;
+    display: none;
+}
 
 
+.cricket p, .lessons p{
+    color: #95c11e;
+}
 
+.i{
+    margin-left: 3vw;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.lessons{
+    position: absolute;
+    top: 14%;
+    right: 0%;
+    font-size: 16vw;
+    font-weight: 900;
+    margin-right: 4vw;
+    text-shadow: 2px 2px 7px white;
+    display: none;
+}
 
 #page3{
     /* border: 2px solid silver; */
     height: 60vh;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 2vw;
     z-index: 2;
 
 }   
@@ -496,6 +557,7 @@ animation-iteration-count: infinite;
     font-weight: 900;
     text-transform: uppercase;
     margin-top: -1vw;
+    white-space: nowrap;
 }
 
 #leagues p{
@@ -533,6 +595,7 @@ animation-iteration-count: infinite;
 
 
 #about-us {
+    /* border: 2px solid blanchedalmond; */
     height: 70vh;
     width: 100%;
     display: flex;
@@ -558,6 +621,7 @@ animation-iteration-count: infinite;
     object-fit: cover;
 }
   #about-us-in {
+    /* border: 2px solid slateblue; */
     width: 50%;
     text-align: center;
   }
@@ -684,4 +748,284 @@ animation-iteration-count: infinite;
     to{
         transform: translateX(-100%);
     }
+}
+
+
+@media (max-width: 600px){
+
+    #cursor, #cursor-id{
+        display:none
+    }
+
+    #nav{
+        padding: 0 2vw;
+    }
+
+    #nav h4{
+       display: none;
+    }
+
+    #logo{
+        width: 40vw;
+        margin-right: 7vw;
+        z-index: 3;
+    }
+
+    #menu{
+        display:inline-block
+    }
+
+    #menu-open{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+    }
+
+    #page1 h1{
+        font-size: 8vw;
+        margin-top: 7vw;
+
+    }
+
+    #page1 h2{
+        font-size: 3.5vw;
+    }
+
+    #page1 p{
+        font-size: 2vw;
+        width: 60%;
+    }
+    #page2{
+        height: 170vh;
+    }
+
+    #scroll-in{
+        height: 7%;    
+    }
+
+    #scroll-in h4{
+        font-size: 7vw;
+    }
+
+    #container{
+        flex-direction: column;
+        gap:1vw;
+        flex-wrap: nowrap;
+        height: 93%;
+    }
+
+    .lesson-card{
+        height: 30%;
+        width: 40%;
+    }
+
+    .overlay h4{
+        font-size: 4vw;
+        white-space: nowrap;
+        font-weight: 800;
+        margin-top: 10vw;
+        margin-left: 1vw;
+    }
+
+    .overlay p{
+        /* color: #000; */
+        font-size: 2vw;
+        /* font-weight: 400; */
+        margin-top: 1.9vw;
+        margin-left: 1vw;
+        line-height: 2.2vw;   
+    }
+
+    #cricket-lesson{
+        display: none;
+    }
+
+    .cricket, .lessons{
+        display: block;
+    }
+
+    #bg1, #bg2{
+        height: 25%;
+        width: 9%;
+        top: 12%;
+    }
+
+    
+    #bg3,#bg4{
+    display: inline-block;
+    position: absolute;
+    object-fit: cover;
+    height: 25%;
+    width: 9%;
+    top: 43%;
+    }
+
+    #bg5,#bg6{
+        display: inline-block;
+        position: absolute;
+        object-fit: cover;
+        height: 25%;
+        width: 9%;
+        top: 74%;
+        }
+
+    #page3-container{
+        flex-direction: column;
+    }
+
+    #page3-container > #image-slide-box {
+        order: 1;
+      }
+
+    #page3{
+        height: 100vh;
+        margin-top: 10vw;
+    }
+    
+    #leagues{
+        width: 90%;
+        height: 40%;
+        text-align: center;
+    }
+
+    #leagues h4{
+        font-size: 4.7vw;
+    }
+
+    #leagues p{
+        font-size: 2.3vw;
+        line-height: 3vw;
+        width: 80%;
+    }
+
+    #image-slide-box{
+        height: 50%;
+        width: 70%;
+        margin-bottom: 5vw;
+    }
+
+    #page3 #first-quote{
+        top: 10%;
+        left: -3%;
+        height: 6vw;
+        width: 6vw;
+    }
+
+    #page3 #second-quote{
+        bottom: 12%;
+        right: 2%;
+        height: 6vw;
+        width: 6vw;
+        }
+
+    #image-slide-box .image-slider{
+        height: 4vh;
+        width: 4vw;
+        bottom: -0.3%;
+    }
+
+    #image-slider1{
+        left: 45%;
+    }
+    #image-slider2{
+        left: 50%;
+    }
+    #image-slider3{
+        left: 55%;
+    }
+
+    #about-us{
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    #about-us #about-us-in{
+        order: -1;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        margin-left: 3vw;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 5vw;
+        width: 54%;
+    }
+
+    #about-us-in h4{
+        font-size: 6vw;
+    }
+
+    #about-us-in p {
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+
+    #about-us #about-us-image1{
+        position: absolute;
+        top: 0%;
+        right: 0;
+        height: 40%;
+        width: 35%;
+        object-fit: cover;
+        margin-top: 5vw;
+        margin-right: 5vw;
+    }
+
+    #about-us #about-us-image2{
+        position: absolute;
+        bottom: 0%;
+        right: 0;
+        height: 40%;
+        width: 35%;
+        object-fit: cover;
+        margin-bottom: 5vw;
+        margin-right: 5vw;
+    }
+
+    #footer{
+        /* border: 2px solid slateblue; */
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 90vh;
+        gap: 1vw;
+        padding-top: 1vw;
+        padding-bottom: 2vw;
+    }
+
+    #footer > img {
+       display:none;
+      }
+
+      
+    #f1{
+        /* border: 2px solid wheat; */
+        display:flex;
+        align-items: center;
+        width: 100%;
+        margin-left: 6vw;
+        margin-top: 2vw;
+    }
+    #f2,
+    #f3,
+    #f4{
+        margin-left: 3vw;
+    }
+
+    #f1 img{
+        height: 100%;
+        width: 90%;
+    }
+
+    #f2 h2,#f3 h2,#f4 h2{
+        font-size: 4vw;
+
+    }
+    #f2 h3,#f3 h3,#f4 h4{
+        font-size: 2vw;
+    }
+
 }
