@@ -86,7 +86,7 @@ body{
 #menu-open{
     /* border: 2px solid palegoldenrod; */
     height: 100vh;
-    width: 33vw;
+    width: 50vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -110,7 +110,7 @@ body{
 #menu-container h4{
     margin-bottom: 3vw;
     color: #fff;
-    font-size: 3vw;
+    font-size: 4.5vw;
     font-weight: 900;
     white-space: nowrap;
     margin-left: 1vw;
@@ -383,11 +383,11 @@ animation-iteration-count: infinite;
 
 .cricket{
     position: absolute;
-    top: 14%;
+    top: 22%;
     left: 0%;
-    font-size: 16vw;
+    font-size: 80px;
     font-weight: 900;
-    margin-left: 5vw;
+    margin-left: 2vw;
     text-shadow: 2px 2px 7px white;
     display: none;
 }
@@ -403,11 +403,11 @@ animation-iteration-count: infinite;
 
 .lessons{
     position: absolute;
-    top: 14%;
+    top: 22%;
     right: 0%;
-    font-size: 16vw;
+    font-size: 80px;
     font-weight: 900;
-    margin-right: 4vw;
+    margin-right: 2vw;
     text-shadow: 2px 2px 7px white;
     display: none;
 }
@@ -758,7 +758,9 @@ animation-iteration-count: infinite;
     }
 
     #nav{
+        /* border: 2px solid orange; */
         padding: 0 2vw;
+        height: 10vh;
     }
 
     #nav h4{
@@ -783,18 +785,18 @@ animation-iteration-count: infinite;
     }
 
     #page1 h1{
-        font-size: 8vw;
+        font-size: 9vw;
         margin-top: 7vw;
 
     }
 
     #page1 h2{
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     #page1 p{
-        font-size: 2vw;
-        width: 60%;
+        font-size: 2.3vw;
+        width: 65%;
     }
     #page2{
         height: 170vh;
@@ -809,32 +811,33 @@ animation-iteration-count: infinite;
     }
 
     #container{
+        /* border: 2px solid beige; */
         flex-direction: column;
-        gap:1vw;
+        gap:30px;
         flex-wrap: nowrap;
         height: 93%;
     }
 
     .lesson-card{
-        height: 30%;
-        width: 40%;
+        height: 25%;
+        width: 50%;
     }
 
     .overlay h4{
-        font-size: 4vw;
+        font-size: 4.5vw;
         white-space: nowrap;
         font-weight: 800;
-        margin-top: 10vw;
-        margin-left: 1vw;
+        margin-top: 15vw;
+        margin-left: 6px;
     }
 
     .overlay p{
         /* color: #000; */
-        font-size: 2vw;
+        font-size: 2.7vw;
         /* font-weight: 400; */
-        margin-top: 1.9vw;
-        margin-left: 1vw;
-        line-height: 2.2vw;   
+        margin-top: 4vw;
+        margin-left: 6px;
+        line-height: 3.3vw;   
     }
 
     #cricket-lesson{
@@ -846,9 +849,9 @@ animation-iteration-count: infinite;
     }
 
     #bg1, #bg2{
-        height: 25%;
+        height: 20%;
         width: 9%;
-        top: 12%;
+        top: 17%;
     }
 
     
@@ -856,16 +859,16 @@ animation-iteration-count: infinite;
     display: inline-block;
     position: absolute;
     object-fit: cover;
-    height: 25%;
+    height: 20%;
     width: 9%;
-    top: 43%;
+    top: 45%;
     }
 
     #bg5,#bg6{
         display: inline-block;
         position: absolute;
         object-fit: cover;
-        height: 25%;
+        height: 20%;
         width: 9%;
         top: 74%;
         }
@@ -879,7 +882,7 @@ animation-iteration-count: infinite;
       }
 
     #page3{
-        height: 100vh;
+        height: 70vh;
         margin-top: 10vw;
     }
     
@@ -890,19 +893,19 @@ animation-iteration-count: infinite;
     }
 
     #leagues h4{
-        font-size: 4.7vw;
+        font-size: 5vw;
     }
 
     #leagues p{
-        font-size: 2.3vw;
-        line-height: 3vw;
-        width: 80%;
+        font-size:3vw;
+        line-height: 3.2vw;
+        width: 90%;
     }
 
     #image-slide-box{
         height: 50%;
         width: 70%;
-        margin-bottom: 5vw;
+        margin-bottom: 7vw;
     }
 
     #page3 #first-quote{
@@ -920,9 +923,8 @@ animation-iteration-count: infinite;
         }
 
     #image-slide-box .image-slider{
-        height: 4vh;
-        width: 4vw;
-        bottom: -0.3%;
+        height: 3vh;
+        width: 5vw;
     }
 
     #image-slider1{
@@ -936,7 +938,7 @@ animation-iteration-count: infinite;
     }
 
     #about-us{
-        height: 80vh;
+        height: 60vh;
         flex-direction: column;
     }
 
@@ -956,12 +958,12 @@ animation-iteration-count: infinite;
     }
 
     #about-us-in h4{
-        font-size: 6vw;
+        font-size: 7.5vw;
     }
 
     #about-us-in p {
-        font-size: 2vw;
-        line-height: 3vw;
+        font-size: 2.7vw;
+        line-height: 4vw;
     }
 
     #about-us #about-us-image1{
@@ -990,7 +992,7 @@ animation-iteration-count: infinite;
         /* border: 2px solid slateblue; */
         flex-direction: column;
         align-items: flex-start;
-        min-height: 90vh;
+        min-height: 55vh;
         gap: 1vw;
         padding-top: 1vw;
         padding-bottom: 2vw;
@@ -1025,7 +1027,7 @@ animation-iteration-count: infinite;
 
     }
     #f2 h3,#f3 h3,#f4 h4{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
 }

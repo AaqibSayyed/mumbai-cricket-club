@@ -14,7 +14,7 @@ document.addEventListener('mousemove', function(e){
 gsap.to('#nav',{
     backgroundColor: '#000', 
     duration: 1,
-    height: "12vh",
+    height: "11vh",
     color: '#000',
     opacity:0.8,
     scrollTrigger:{
