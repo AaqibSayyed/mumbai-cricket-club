@@ -83,7 +83,7 @@ gsap.from('#page3',{
 })
 
 gsap.to('#first-quote',{
-    top:-5,
+    top:3,
     delay:2,
     scrollTrigger:{
         trigger:'#page3',
