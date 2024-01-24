@@ -185,6 +185,8 @@ linkMobile.forEach((elem)=>{
 
         })
         elem.style.textDecoration = 'underline'
+        let menuClose = document.getElementById('menu-open')
+        menuClose.style.transform = "translateX(100%)"
 })
 
 })
@@ -197,7 +199,6 @@ function closeBar(){
 }
 
 function showBar(){
-    console.log('clicked')
     let barshow = document.getElementById('menu-open')
     barshow.style.transform = "translateX(0%)"
 }
